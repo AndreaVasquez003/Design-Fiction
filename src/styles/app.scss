@@ -51,6 +51,10 @@ h1{
     z-index: 3;
     width: 50%;
     left: 6%;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    stroke-linecap: round;
+    animation: stroke-anim 1s ease-in-out forwards;
 }
 
 .trait__el2{
@@ -59,7 +63,20 @@ h1{
     width: 50%;
     right: 6%;
     bottom: 41%;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    stroke-linecap: round;
+    animation: stroke-anim 1s ease-in-out forwards;
 }
+
+@keyframes stroke-anim{
+
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
 
 /***************************** SECTION 2*/
 
@@ -1572,6 +1589,7 @@ p{
     .item45 {
         gap: 74em;
     }
+
 }
 
 @media (min-width: 1660px){
@@ -1631,7 +1649,7 @@ p{
     }
 
     .item29 .ligne__el1 {
-        margin-right: 38.9%;
+        margin-right: 36.9%;
     }
 
     .item38 {
@@ -1652,6 +1670,7 @@ p{
     .item45{
         gap: 80em;
     }
+
 }
 
 @media (min-width: 1730px){
@@ -1695,6 +1714,7 @@ p{
     .item45 {
         gap: 84em;
     }
+
 }
 
 
