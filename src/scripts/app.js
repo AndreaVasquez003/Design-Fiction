@@ -1,8 +1,50 @@
 "use strict"
-import { gsap } from "gsap";
 
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+
+const menuBurgerBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+const Btn01Menu = document.querySelector('#Btn01');
+const Btn02Menu = document.querySelector('#Btn02');
+const Btn03Menu = document.querySelector('#Btn03');
+
+Btn01Menu.addEventListener('click', () => {
+  menuBurgerBtn.classList.toggle('open');
+	menu.classList.toggle('open');
+});
+
+Btn02Menu.addEventListener('click', () => {
+  menuBurgerBtn.classList.toggle('open');
+	menu.classList.toggle('open');
+});
+
+Btn03Menu.addEventListener('click', () => {
+  menuBurgerBtn.classList.toggle('open');
+	menu.classList.toggle('open');
+});
+
+menuBurgerBtn.addEventListener('click', () => {
+	menuBurgerBtn.classList.toggle('open');
+	menu.classList.toggle('open');
+});
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('.menu');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "-100px";
+  } else {
+    navbar.style.top = "0";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -238,12 +280,12 @@ gsap.to(".ligne__el10", {
   }
 });
 
-    const split = new SplitText(".item2 h3");
-    const split2 = new SplitText(".item7 h3");
-    const split3 = new SplitText(".item19 .h3__modif");
-    const split4 = new SplitText(".item26 .h3__modif");
-    const split5 = new SplitText(".item30 .h3__modif");
-    const split6 = new SplitText(".item5 h4", ".item5 p");
+  const split = new SplitText(".item2 h3");
+  const split2 = new SplitText(".item7 h3");
+  const split3 = new SplitText(".item19 .h3__modif");
+  const split4 = new SplitText(".item26 .h3__modif");
+  const split5 = new SplitText(".item30 .h3__modif");
+  const split6 = new SplitText(".item5 h4", ".item5 p");
 
 
 gsap.from(split.chars, {
@@ -316,5 +358,29 @@ gsap.from(split6.chars, {
         end: "top center",
     }
 });
+
+gsap.registerPlugin(ScrollToPlugin);
+
+Btn01.onclick = function(){
+  gsap.to(window,{duration: 0.5, scrollTo:".item5",})
+}
+
+Btn02.onclick = function(){
+  gsap.to(window,{duration: 0.5, scrollTo:".item7",})
+}
+
+Btn03.onclick = function(){
+  gsap.to(window,{duration: 0.5, scrollTo:".item19",})
+}
+
+BtnReseaux01.onclick = function(){
+  document.location.href="https://www.facebook.com/people/Andrea-Vasquez/pfbid037BLeFZ41o5xQdEdNnhYyHHZ9SfexPR71NM4oNwKw2nWoUEdAg3VHecZWHqEzF6Ubl/?mibextid=wwXIfr&rdid=Hw6Blwch92WxCi3M&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Bk7xj1S8P%2F%3Fmibextid%3DwwXIfr"
+}
+
+BtnReseaux02.onclick = function(){
+  document.location.href="https://www.instagram.com/andreavasquez8611/?igsh=MXhsMWVtd3dyMHFiZg%3D%3D&utm_source=qr#"
+}
+
+
 
 
