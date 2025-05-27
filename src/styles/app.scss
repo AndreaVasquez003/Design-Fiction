@@ -683,11 +683,6 @@ p{
 
 /*********************************** Responsive*/
 
-@media(min-width: 350px){
-    .trait__el2 {
-        bottom: 28%;
-    }
-}
 
 @media(min-width: 390px){
     .container__all{
@@ -713,6 +708,12 @@ p{
 
     .trait__el2 {
         bottom: 43%;
+    }
+}
+
+@media(min-width: 395px){
+    .trait__el2 {
+        bottom: 28%;
     }
 }
 

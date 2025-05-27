@@ -32,16 +32,16 @@ menuBurgerBtn.addEventListener('click', () => {
 });
 
 let lastScrollTop = 0;
-const navbar = document.querySelector('.menu'); // Assure-toi que l'élément existe
+const navbar = document.querySelector('.menu');
 
 window.addEventListener('scroll', () => {
   if (window.innerWidth >= 1200) {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      navbar.style.top = "-100px"; // Cache la navbar
+      navbar.style.top = "-100px";
     } else {
-      navbar.style.top = "0"; // Affiche la navbar
+      navbar.style.top = "0";
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
