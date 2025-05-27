@@ -5,6 +5,13 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const video = document.querySelector('.vid__el');
+    video.play().catch(e => {
+      console.log("Autoplay bloqué :", e);
+    });
+  });
+
 const menuBurgerBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const Btn01Menu = document.querySelector('#Btn01');
