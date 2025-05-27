@@ -32,18 +32,20 @@ menuBurgerBtn.addEventListener('click', () => {
 });
 
 let lastScrollTop = 0;
-const navbar = document.querySelector('.menu');
+const navbar = document.querySelector('.menu'); // Assure-toi que l'élément existe
 
 window.addEventListener('scroll', () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (window.innerWidth >= 1200) {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) {
-    navbar.style.top = "-100px";
-  } else {
-    navbar.style.top = "0";
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = "-100px"; // Cache la navbar
+    } else {
+      navbar.style.top = "0"; // Affiche la navbar
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }
-
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
 gsap.registerPlugin(ScrollTrigger);
