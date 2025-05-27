@@ -683,6 +683,13 @@ p{
 
 /*********************************** Responsive*/
 
+@media(min-width: 350px){
+    .trait__el2 {
+        bottom: 38%;
+        width: 40%;
+    }
+}
+
 @media(min-width: 390px){
     .container__all{
         height: 2500vh;
@@ -706,7 +713,7 @@ p{
     }
 
     .trait__el2 {
-        bottom: 42%;
+        bottom: 43%;
     }
 }
 
@@ -725,7 +732,7 @@ p{
 
     .trait__el2 {
         right: 11%;
-        bottom: 38%;
+        bottom: 43%;
     }
 }
 
