@@ -711,12 +711,6 @@ p{
     }
 }
 
-@media(min-width: 395px){
-    .trait__el2 {
-        bottom: 28%;
-    }
-}
-
 @media(min-width: 410px){
     .container__all{
         height: 2300vh;
@@ -733,6 +727,12 @@ p{
     .trait__el2 {
         right: 11%;
         bottom: 43%;
+    }
+}
+
+@media(min-width: 420px){
+    .trait__el2 {
+        bottom: 28%;
     }
 }
 
