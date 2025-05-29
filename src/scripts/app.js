@@ -289,13 +289,17 @@ gsap.to(".ligne__el10", {
   }
 });
 
+gsap.registerPlugin(SplitText);
+
   const split = new SplitText(".item2 h3");
   const split2 = new SplitText(".item7 h3");
   const split3 = new SplitText(".item19 .h3__modif");
   const split4 = new SplitText(".item26 .h3__modif");
   const split5 = new SplitText(".item30 .h3__modif");
-  const split6 = new SplitText(".item5 h4", ".item5 p");
-
+  const split6 = new SplitText(".item5 h4, .item5 p");
+  const split7 = new SplitText(".item9 h4, .item9 p");
+  const split8 = new SplitText(".item23 p");
+  const split9 = new SplitText(".item27 h4, .item27 p");
 
 gsap.from(split.chars, {
     opacity: 0.1,
@@ -357,14 +361,55 @@ gsap.from(split5.chars, {
     }
 });
 
-gsap.from(split6.chars, {
+gsap.from(split6.lines, {
+    duration: 0.6,
+    yPercent: 100,
     opacity: 0,
-    stagger: 0.01,
-    duration: 0.1,
+    stagger: 0.1,
+    ease: "expo.out",
     scrollTrigger: {
-        trigger: ".item5 h4",
+        trigger: ".item5 h4, .item5 p",
         start: "top 80%",
-        end: "top center",
+        scrub:true,
+    }
+});
+
+gsap.from(split7.lines, {
+    duration: 0.6,
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.1,
+    ease: "expo.out",
+    scrollTrigger: {
+        trigger: ".item9 h4, .item9 p",
+        start: "top 80%",
+        scrub:true,
+    }
+});
+
+gsap.from(split8.lines, {
+    duration: 0.6,
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.1,
+    ease: "expo.out",
+    scrollTrigger: {
+        trigger: ".item23 p",
+        start: "top 80%",
+        scrub:true,
+    }
+});
+
+gsap.from(split9.lines, {
+    duration: 0.6,
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.1,
+    ease: "expo.out",
+    scrollTrigger: {
+        trigger: ".item27 h4, .item27 p",
+        start: "top 80%",
+        scrub:true,
     }
 });
 
